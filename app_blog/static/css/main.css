@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@media (max-width: 480px) {
+h1 {
+ font-size: 18px;
+}
+}
+body {
+ background-color: rgb(17, 24, 65);
+}
+.container h1{
+  color: #c4c4c4;
+}
+/* div > h1 {
+ color: #fff;
+ font-family: 'Ubuntu', sans-serif;
+} */
+body > div > nav > div > a > h4 {
+ color: #000;
+ font-family: 'Ubuntu', sans-serif;
+}
+.article-block {
+ background: #ffffff;
+ color: #383838;
+ font-family: 'Ubuntu', sans-serif;
+ box-shadow: 4px 4px 1px #ccc;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 15px;
+
+}
+.article-block p{
+  color: #000;
+}
+.article-block:hover {
+    filter: brightness(80%);
+    transition: filter 0.3s ease
+  }
+.article-block a {
+ color: #383838;
+ font-family: 'Ubuntu', sans-serif;
+}
+body > div > div > ol > li {
+ margin: 0 5px;
+}
+div.container-image > img {
+    width: 100%;
+   }
+
+.articles-row {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.articles-row p{
+  color: #000;
+}
+
+.navbar{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 4px 4px 1px #ccc;
+  margin: 10px;
+}
+.navbar > .container{
+justify-content: start;
+gap: 10px;
+
+}
+.link-category{
+  padding: 10px 15px;
+  background-color: #c4c4c4;
+  border-radius: 7px;
+  border: #000 1px solid;
+  /* box-shadow: 4px 4px 1px #ccc; */
+}
+.link-category > h4 {
+  margin-bottom: 0;
+}
+.link-category:hover{
+  filter: brightness(80%);
+  transition: filter 0.3s ease
+}
+.breadcrumb li + li:before{
+content: ' / ';
+padding: 0 5px;
+}
+.detail h3, p, div {
+  color: #ffff;
+}
+.breadcrumb{
+  color: rgb(68, 68, 68);
+  background-color: #c0c0c0;
+}

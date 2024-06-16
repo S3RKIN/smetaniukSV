@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% spaceless %}
+<ol class="breadcrumb">
+            <li><a href="/">Головна</a></li>
+            <li><a href="{% url 'articles-list' %}">Публікації</a></li>
+            <li>{{ item.title|upper }}</li>
+</ol>
+{% if not category %} 
+     <h1>Всі публікації</h1>
+<br/>
+{% endif %}
+
+
+{% if category %} 
+   <h1> Категорія: {{ category }} </h1> 
+{% endif %}
+
+{% for item in items %}
+    <div class="articles-row">
+        <a href="{{ item.get_absolute_url }}">
+            <h4>{{ item.title }}</h4>
+        </a>
+        <h5>
+            {{ item.pub_date|date:"j E Y"|safe|linebreaks }}
+        </h5>
+        <p>
+            {{ item.description|safe|escape|striptags|truncatewords_html:32 }}
+        </p>
+        <div class="container-image">
+            <img class="img" src="{{ item.images.all.0.image.url }}" alt=""/>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+{% endfor %}
+
+{% endspaceless %}
+{% endblock %}
